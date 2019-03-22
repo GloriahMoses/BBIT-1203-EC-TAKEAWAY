@@ -8,8 +8,8 @@ package television;
 public class Television {
     
     private boolean isSwitchedOn; // either true or false
-    public int volume; // from 0 to 10
-    public double frequency; // from 535 to 1605 Mhz
+    private int volume; // from 0 to 10
+    private double frequency; // from 535 to 1605 Mhz
 
    public boolean setvolume(int volume){
        boolean flag;
