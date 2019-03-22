@@ -1,0 +1,46 @@
+package television;
+
+/**
+ *
+ * @author 92504
+ */
+
+public class Television {
+    
+    private boolean isSwitchedOn; // either true or false
+    public int volume; // from 0 to 10
+    public double frequency; // from 535 to 1605 Mhz
+
+   public boolean setvolume(int volume){
+       boolean flag;
+       if(volume >= 0 && volume <= 10){
+           volume = volume;
+           flag = true;
+       }
+       else{  
+           System.out.println("Volume must be between zero and ten");
+           flag = false;
+       }
+       return flag;
+   }
+   
+   public boolean setfrequency(int frequency){
+       boolean flag;
+       if(frequency >= 535 && frequency <= 1605){
+           frequency = frequency;
+           flag = true;
+       }
+       else{  
+           System.out.println("Frequency must be between 535 to 1605 Mhz");
+           flag = false;
+       }
+       return flag;
+   }
+    
+    public static void main(String[] args) {
+     Television Samsung = new Television();
+     System.out.println(Samsung.setvolume(9));
+     System.out.println(Samsung.setfrequency(900));
+    }
+    
+}
